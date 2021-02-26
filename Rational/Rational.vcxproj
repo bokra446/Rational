@@ -142,6 +142,7 @@
     <ClInclude Include="Rational.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Rational.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
