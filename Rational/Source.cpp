@@ -6,10 +6,18 @@ int main() {
     Rational y(10, 5); // 10/5
     Rational z(7);
 
-    std::cout << "x.eq(y): ";
-    std::cout << x.eq(y) << std::endl;
-    std::cout << "x.neq(y): ";
-    std::cout << x.neq(y) << std::endl;
+    std::cout << "x < y: ";
+    std::cout << (x < y) << std::endl;
+    std::cout << "x <= y: ";
+    std::cout << (x <= y) << std::endl;
+    std::cout << "x > y: ";
+    std::cout << (x > y) << std::endl;
+    std::cout << "x >= y: ";
+    std::cout << (x >= y) << std::endl;
+    std::cout << "x == y: ";
+    std::cout << (x == y) << std::endl;
+    std::cout << "x != y: ";
+    std::cout << (x != y) << std::endl;
     std::cout << "z.neg(): ";
     z.neg().print();
 
@@ -24,4 +32,9 @@ int main() {
     (x * y).print();
     std::cout << "x / y: ";
     (x / y).print();
+    y.reduce().print();
+    Rational k;
+    std::cout << "Enter fraction number" << std::endl;
+    std::cin >> k;
+    std::cout << k << std::endl;
 }

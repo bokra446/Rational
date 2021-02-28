@@ -1,9 +1,13 @@
 #pragma once
+#include <iostream>
 
 /**
  * Дробь, x/y
  */
 class Rational {
+    friend std::ostream& operator<< (std::ostream& out, const Rational& rational);
+    friend std::istream& operator>> (std::istream& in, Rational& rational);
+
 public:
     // not a number
     // Указывает, что число не является числом
@@ -59,4 +63,13 @@ public:
     Rational operator- (Rational);
     Rational operator* (Rational);
     Rational operator/ (Rational);
+
+    bool operator< (Rational);
+    bool operator<= (Rational);
+    bool operator> (Rational);
+    bool operator>= (Rational);
+    bool operator== (Rational);
+    bool operator!= (Rational);
+
+    bool checkNanOperation();
 };
